@@ -1,3 +1,10 @@
+body {
+  overflow: hidden;
+  &.app-mounted {
+    overflow: unset;
+  }
+}
+
 .heading-title-hightlight {
   &::after {
     display: none;
@@ -41,10 +48,22 @@
 
 .backtotop {
   background-color: #f73e3f;
+
+  &:hover {
+    background-color: #cd0e0e;
+  }
 }
 
 .spin {
   border-top-color: #f73e3f;
   border-left-color: #f73e3f;
   border-bottom-color: #f73e3f;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.min-vh100 {
+  min-height: 100vh;
 }

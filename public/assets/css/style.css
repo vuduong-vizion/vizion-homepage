@@ -239,8 +239,8 @@ a:hover {
 }
 
 .spdtb {
-  padding-top: 80px;
-  padding-bottom: 140px;
+  padding-top: 180px;
+  padding-bottom: 120px;
 }
 
 .spdb {
@@ -3424,9 +3424,6 @@ img.h600 {
   display: block;
   font-weight: 500;
 }
-.site-header .main-menu > ul > li > a:hover .toggle-sub-menu:after {
-  color: var(--sala-primary-navy, #0057fc);
-}
 .site-header .main-menu > ul > li:hover > .sub-menu {
   top: calc(100% + 30px);
   opacity: 1;
@@ -3471,7 +3468,6 @@ img.h600 {
   content: "\f107";
   font-family: "Line Awesome Free";
   margin-left: 8px;
-  color: var(--sala-neutral-normal, #555555);
   vertical-align: 2px;
   font-size: 12px;
   font-weight: 900;
@@ -3486,7 +3482,6 @@ img.h600 {
   text-align: left;
   margin-left: -15px;
   margin-right: -15px;
-  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--sala-neutral-white, #ffffff);
   border-radius: 5px;
@@ -13254,6 +13249,9 @@ form.checkout-coupon input[type=text] {
 .backtotop {
   background-color: #f73e3f;
 }
+.backtotop:hover {
+  background-color: #cd0e0e;
+}
 
 .spin {
   border-top-color: #f73e3f;
@@ -13261,35 +13259,106 @@ form.checkout-coupon input[type=text] {
   border-bottom-color: #f73e3f;
 }
 
+.vh100 {
+  height: 100vh;
+}
+
+.vz-header {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+.vz-header.bg-color {
+  background-color: white;
+}
+
+.industries-menu {
+  max-width: 1000px;
+}
+
+.solution-menu {
+  max-width: 400px;
+}
+
+.vz-sub-menu {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.3);
+}
+.vz-sub-menu.text-black {
+  color: black;
+}
+.vz-sub-menu:hover {
+  color: #f73e3f;
+}
+.vz-sub-menu:hover .vz-toggle-sub--menu::after {
+  color: #f73e3f;
+}
+
+.vz-toggle-sub--menu::after {
+  color: white;
+}
+.vz-toggle-sub--menu.arrow-black::after {
+  color: black;
+}
+
+.vz-sub-menu--item:hover {
+  color: #f73e3f;
+}
+
 .banner {
   position: relative;
   padding: 0;
   pointer-events: none;
   width: 100%;
-  height: calc(100vh - 130px);
+  height: 100vh;
   background-color: transparent;
   background-image: unset;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .banner-video {
   position: relative;
-  width: 100%;
+  height: 100%;
   z-index: 0;
-  cursor: pointer;
   pointer-events: none;
   aspect-ratio: 16/9;
   scale: 1.3;
 }
 .banner-video iframe {
+  object-fit: none;
   width: 100%;
   height: 100%;
+}
+.banner-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4901960784);
+}
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-content .heading-title {
+  color: #fff;
 }
 
 .discover {
   padding-bottom: 0px;
 }
 
+.bussiness-discover {
+  padding: 80px 0;
+}
 .bussiness-discover--spdtb {
   padding: 0;
 }
@@ -13305,6 +13374,7 @@ form.checkout-coupon input[type=text] {
 
 .vizion-our-services .block-image-box.layout-04 .image-box {
   padding: 20px;
+  width: 400px;
 }
 .vizion-our-services .block-image-box.layout-04 .image-box .thumbnail {
   position: relative;
